@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b1020" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Push Link" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="Push the Link — a grid puzzle where every box you push drags a network of linked boxes with it." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <title>Push the Link</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <button class="icon-btn only-compact" id="btn-levels" data-i18n-aria="levels">☰</button>
+        <button class="brand" id="btn-home" data-i18n-aria="toTitle">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i></span>
+          <span class="brand-name">Push the Link</span>
+        </button>
+        <div class="level-heading" aria-live="polite">
+          <span id="lvl-num" class="lvl-num"></span>
+          <span id="lvl-name" class="lvl-name"></span>
+        </div>
+        <div class="top-actions">
+          <button class="pill-btn" id="btn-lang"></button>
+          <button class="icon-btn" id="btn-sound" aria-pressed="true"></button>
+          <button class="icon-btn only-compact" id="btn-info" data-i18n-aria="levelNote" aria-expanded="false">i</button>
+        </div>
+      </header>
+
+      <main class="layout">
+        <aside class="panel levels-panel" id="levels-panel">
+          <div class="panel-head">
+            <h2 data-i18n="levels"></h2>
+            <span class="star-total" id="star-total"></span>
+          </div>
+          <ol class="level-list" id="level-list"></ol>
+          <button class="text-btn" id="btn-clear" data-i18n="resetProgress"></button>
+        </aside>
+
+        <section class="stage">
+          <div class="hud">
+            <div class="stat stat-main"><span class="stat-label" data-i18n="steps"></span><span class="stat-value" id="hud-steps">0</span></div>
+            <div class="stat" id="hud-optimal-stat" hidden><span class="stat-label" data-i18n="optimal"></span><span class="stat-value" id="hud-optimal">–</span></div>
+            <div class="stat"><span class="stat-label" data-i18n="best"></span><span class="stat-value" id="hud-best">–</span></div>
+            <div class="mode-badge" id="hud-mode" hidden></div>
+          </div>
+          <div class="board-wrap" id="board-host" role="application" aria-describedby="status"></div>
+          <p class="status" id="status" aria-live="polite"></p>
+          <div class="controls">
+            <div class="actions" id="actions">
+              <button class="act" id="btn-undo"><kbd>Z</kbd><span data-i18n="undo"></span></button>
+              <button class="act" id="btn-reset"><kbd>R</kbd><span data-i18n="reset"></span></button>
+              <button class="act" id="btn-hint" hidden><kbd>H</kbd><span data-i18n="hint"></span></button>
+              <button class="act act-demo" id="btn-demo" hidden><span id="demo-label" data-i18n="demo"></span></button>
+            </div>
+          </div>
+        </section>
+
+        <aside class="panel info-panel" id="info-panel">
+          <div class="sheet-head only-compact">
+            <h2 data-i18n="levelNote"></h2>
+            <button class="icon-btn" id="btn-info-close" data-i18n-aria="back">✕</button>
+          </div>
+          <section class="card">
+            <h3 data-i18n="levelNote"></h3>
+            <p id="lvl-note"></p>
+            <p class="tip" id="lvl-tip"></p>
+          </section>
+          <section class="card" id="network-card">
+            <div class="card-head">
+              <h3 data-i18n="network"></h3>
+              <span class="mode-badge" id="net-mode" hidden></span>
+            </div>
+            <ul class="net-list" id="net-active"></ul>
+            <div id="net-other-wrap" hidden>
+              <div id="net-other"></div>
+              <p class="fine" id="net-switch-hint"></p>
+            </div>
+          </section>
+          <details class="card legend" id="legend">
+            <summary><h3 data-i18n="legend"></h3></summary>
+            <ul>
+              <li><b>↔</b><span data-i18n="legendSame"></span></li>
+              <li><b>⇄</b><span data-i18n="legendReverse"></span></li>
+              <li><b>↻</b><span data-i18n="legendCw"></span></li>
+              <li><b>↺</b><span data-i18n="legendCcw"></span></li>
+              <li><b data-mirror="H"></b><span data-i18n="legendH"></span></li>
+              <li><b data-mirror="V"></b><span data-i18n="legendV"></span></li>
+              <li class="wide"><b>›</b><span data-i18n="legendOneWay"></span></li>
+              <li class="wide"><b>@</b><span data-i18n="legendShadow"></span></li>
+            </ul>
+          </details>
+        </aside>
+        <div class="scrim" id="scrim" hidden></div>
+      </main>
+
+      <div class="title-screen" id="title-screen">
+        <div class="title-bg" id="title-board"></div>
+        <div class="title-content">
+          <h1 class="logo">
+            <span class="logo-mark" aria-hidden="true"><i></i><b></b><i></i></span>
+            Push the Link
+          </h1>
+          <p class="subtitle" data-i18n="subtitle"></p>
+          <div class="title-buttons">
+            <button class="btn primary" id="btn-start"></button>
+            <button class="btn" id="btn-title-levels" data-i18n="levelSelect"></button>
+            <button class="btn" id="btn-how" data-i18n="howToPlay"></button>
+            <button class="btn" id="btn-install" data-i18n="installApp" hidden></button>
+          </div>
+          <p class="title-stars" id="title-stars"></p>
+          <div class="title-toggles">
+            <button class="pill-btn" id="btn-lang-title"></button>
+            <button class="pill-btn" id="btn-sound-title"></button>
+            <button class="pill-btn cheat-pill" id="btn-cheat-hints" hidden></button>
+            <button class="pill-btn cheat-pill" id="btn-cheat-solutions" hidden></button>
+          </div>
+        </div>
+        <div class="soldier-strip" id="soldier-strip"></div>
+      </div>
+
+      <div class="modal" id="modal" hidden>
+        <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+          <div id="modal-body"></div>
+        </div>
+      </div>
+
+      <div class="coach" id="coach" hidden>
+        <div class="coach-hole" id="coach-hole"></div>
+        <div class="coach-bubble" role="dialog" aria-live="polite" id="coach-bubble">
+          <p id="coach-text"></p>
+          <div class="coach-actions">
+            <span class="coach-count" id="coach-count"></span>
+            <button class="text-btn" id="coach-skip" data-i18n="skip"></button>
+            <button class="btn primary small" id="coach-next"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="toast" id="toast" role="status" hidden></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

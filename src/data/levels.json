@@ -1,0 +1,1063 @@
+[
+  {
+    "id": 1,
+    "title": {
+      "zh": "唱反调",
+      "en": "Contrarians"
+    },
+    "tag": {
+      "zh": "反向连线",
+      "en": "Reverse link"
+    },
+    "rows": [
+      "#########",
+      "#.......#",
+      "#.@A..g.#",
+      "#.......#",
+      "#########",
+      "#.g..B..#",
+      "#.......#",
+      "#########"
+    ],
+    "links": [["A", "B", 2]],
+    "note": {
+      "zh": "A 和 B 永远对着干：A 往右，B 就往左。隔着墙也一样。",
+      "en": "A goes right, B insists on going left. A wall in between? The link doesn’t care."
+    },
+    "tip": {
+      "zh": "一直按 → 就行。",
+      "en": "Just keep pressing →."
+    },
+    "solution": "RRR",
+    "optimal": 3
+  },
+  {
+    "id": 2,
+    "title": {
+      "zh": "那边卡住了",
+      "en": "Stuck Over There"
+    },
+    "tag": {
+      "zh": "那头被堵",
+      "en": "Remote block"
+    },
+    "rows": [
+      "#########",
+      "#....g..#",
+      "#.@A....#",
+      "#.......#",
+      "#########",
+      "#...#B..#",
+      "#..g....#",
+      "#########"
+    ],
+    "links": [["A", "B", 2]],
+    "note": {
+      "zh": "你这边宽敞，B 那边却贴着墙。连线上只要有一个箱子挪不动，这一步就不算。",
+      "en": "Your side is wide open, but B is up against a wall. If any box can’t move, the whole step is off."
+    },
+    "tip": {
+      "zh": "先按 → 看看是谁卡住了，再绕到 A 下面去。",
+      "en": "Press → to see who’s stuck, then go around under A."
+    },
+    "solution": "DRULURR",
+    "optimal": 7
+  },
+  {
+    "id": 3,
+    "title": {
+      "zh": "拐个弯",
+      "en": "Taking a Turn"
+    },
+    "tag": {
+      "zh": "转弯连线",
+      "en": "Quarter turn"
+    },
+    "rows": [
+      "#########",
+      "#.......#",
+      "#...g...#",
+      "#.@A....#",
+      "#..B.g..#",
+      "#.......#",
+      "#.......#",
+      "#########"
+    ],
+    "links": [["A", "B", 3]],
+    "note": {
+      "zh": "↺ 会让方向拐个弯：你把 A 往右推，B 却往上走，还可能顺手把你顶开。",
+      "en": "↺ is a turning link: push A right and B goes up — and it might shove you out of the way."
+    },
+    "tip": {
+      "zh": "换几个方向推 A，看看你会被顶到哪儿。",
+      "en": "Push A from different sides and watch where you get bumped to."
+    },
+    "solution": "RRDULLDDR",
+    "optimal": 9
+  },
+  {
+    "id": 4,
+    "title": {
+      "zh": "多米诺",
+      "en": "Dominoes"
+    },
+    "tag": {
+      "zh": "连环撞",
+      "en": "Relay"
+    },
+    "rows": [
+      "########",
+      "#.g....#",
+      "#@A.g..#",
+      "#.D....#",
+      "#.BCgg.#",
+      "#......#",
+      "########"
+    ],
+    "links": [["A", "B", 0], ["C", "D", 3]],
+    "note": {
+      "zh": "被连线带着走的箱子撞上别人，会把对方也推走，顺带触发对方的连线。按一下，动一串。",
+      "en": "A dragged box shoves whatever it bumps, firing that box’s link too. One press, a whole chain."
+    },
+    "tip": {
+      "zh": "第一下 → 两根连线就都动了。",
+      "en": "Your very first → lights up both links."
+    },
+    "solution": "RLDDRUR",
+    "optimal": 7
+  },
+  {
+    "id": 5,
+    "title": {
+      "zh": "两对冤家",
+      "en": "Two Odd Couples"
+    },
+    "tag": {
+      "zh": "连环撞",
+      "en": "Relay"
+    },
+    "rows": [
+      "#########",
+      "##....#.#",
+      "#...gCAD#",
+      "#......g#",
+      "#.g@#.###",
+      "#..B.g..#",
+      "#########"
+    ],
+    "links": [["A", "B", 2], ["C", "D", 1]],
+    "note": {
+      "zh": "两对箱子各连各的，偏偏挤在一个屋里，磕磕碰碰在所难免。",
+      "en": "Two pairs, each with their own link, crammed into one room. Bumping is inevitable."
+    },
+    "tip": {
+      "zh": "先想好让谁去撞谁。",
+      "en": "Decide who gets to bump whom."
+    },
+    "solution": "LDRUURRDDLLUUURURDDD",
+    "optimal": 20
+  },
+  {
+    "id": 6,
+    "title": {
+      "zh": "挤一挤",
+      "en": "Elbow Room"
+    },
+    "tag": {
+      "zh": "连环撞",
+      "en": "Relay"
+    },
+    "rows": [
+      "#########",
+      "##Bg..#.#",
+      "#..C#...#",
+      "#..gDg#.#",
+      "#.##.g.##",
+      "#.@..A..#",
+      "#########"
+    ],
+    "links": [["A", "B", 1], ["C", "D", 3]],
+    "note": {
+      "zh": "两对箱子挤在一个小屋里：A—B 右转，C—D 左转。四个箱子四个圈，地方实在不够用。",
+      "en": "Two pairs squeezed into a small room: A—B turns right, C—D turns left. Four boxes, four rings, not much elbow room."
+    },
+    "tip": {
+      "zh": "每推一下，都看看另外三个箱子去哪了。",
+      "en": "After every push, check where the other three went."
+    },
+    "solution": "LUURRRDDRLLLLUUURURRRDDLLUDLLURDRR",
+    "optimal": 34
+  },
+  {
+    "id": 7,
+    "title": {
+      "zh": "上下颠倒",
+      "en": "Upside Down"
+    },
+    "tag": {
+      "zh": "上下镜像",
+      "en": "Vertical mirror"
+    },
+    "rows": [
+      "########",
+      "##@..g.#",
+      "#.A....#",
+      "#......#",
+      "########",
+      "#......#",
+      "#B.....#",
+      "##..g..#",
+      "########"
+    ],
+    "links": [["A", "B", "V"]],
+    "note": {
+      "zh": "这是上下镜像：A 往上，B 就往下；左右走的时候，两个倒是一起走。",
+      "en": "This is an up-down mirror: A goes up, B goes down. Sideways, they move in step."
+    },
+    "tip": {
+      "zh": "只有上下是反的，左右照常。",
+      "en": "Left and right are in sync. Only up and down flip."
+    },
+    "solution": "RDDLLURRRDRU",
+    "optimal": 12
+  },
+  {
+    "id": 8,
+    "title": {
+      "zh": "哈哈镜",
+      "en": "Funhouse"
+    },
+    "tag": {
+      "zh": "两面镜子",
+      "en": "Two mirrors"
+    },
+    "rows": [
+      "#########",
+      "#g......#",
+      "#.#.AC..#",
+      "#g....@.#",
+      "#########",
+      "#.......#",
+      "#...B.#D#",
+      "#..g...g#",
+      "#########"
+    ],
+    "links": [["A", "B", "H"], ["C", "D", "V"]],
+    "note": {
+      "zh": "一对左右镜像，一对上下镜像，两个房间各放两个。镜子那头的箱子可不会给你让路。",
+      "en": "One pair mirrors left-right, one mirrors up-down, two boxes per room. Reflections don’t step aside for you."
+    },
+    "tip": {
+      "zh": "时刻留意另一个房间，别把哪个箱子逼进墙角。",
+      "en": "Keep an eye on the other room — don’t let a reflection get cornered."
+    },
+    "solution": "LURULLLLRRDRDLLL",
+    "optimal": 16
+  },
+  {
+    "id": 9,
+    "title": {
+      "zh": "镜子迷宫",
+      "en": "Hall of Mirrors"
+    },
+    "tag": {
+      "zh": "两对镜像",
+      "en": "Two mirror pairs"
+    },
+    "rows": [
+      "#########",
+      "####.#..#",
+      "#..g..B.#",
+      "##..@gD.#",
+      "##g#CA.g#",
+      "#.#.....#",
+      "#########"
+    ],
+    "links": [["A", "B", "V"], ["C", "D", "V"]],
+    "note": {
+      "zh": "两对上下镜像挤在同一个屋里：左右走时一起走，上下走时就分开。",
+      "en": "Two up-down mirror pairs share one room: sideways they move together, up and down they split."
+    },
+    "tip": {
+      "zh": "别急着往圈里推，先看看每对箱子能停在哪儿。",
+      "en": "Don’t rush them into rings — first see where each pair can actually stop."
+    },
+    "solution": "URRURDLDRDLDLURRULLLULLDRRURRURDD",
+    "optimal": 33
+  },
+  {
+    "id": 10,
+    "title": {
+      "zh": "单行道",
+      "en": "One-Way Street"
+    },
+    "tag": {
+      "zh": "单向连线",
+      "en": "One-way link"
+    },
+    "rows": [
+      "########",
+      "#.g.g..#",
+      "#....B@#",
+      "###..A.#",
+      "#...#..#",
+      "#....#.#",
+      "########"
+    ],
+    "links": [["A", "B", 1, ">"]],
+    "note": {
+      "zh": "带 › 的连线只管一头：推 A，B 会跟着拐弯；直接推 B，A 理都不理。",
+      "en": "A link with › only works one way: push A and B turns along; push B directly and A couldn’t care less."
+    },
+    "tip": {
+      "zh": "B 可以单独推，正好用来把它摆正。",
+      "en": "B can be pushed on its own — use that to line it up."
+    },
+    "solution": "LLRRDDLUULLLRRRUL",
+    "optimal": 17
+  },
+  {
+    "id": 11,
+    "title": {
+      "zh": "牵着走",
+      "en": "On a Leash"
+    },
+    "tag": {
+      "zh": "单向连线",
+      "en": "One-way link"
+    },
+    "rows": [
+      "########",
+      "#gB.##.#",
+      "#..#..g#",
+      "#.A..#.#",
+      "#..@...#",
+      "########"
+    ],
+    "links": [["A", "B", 1, ">"]],
+    "note": {
+      "zh": "A 一动，B 就被拽着右转；你单独推 B，A 不管。屋子小，转身的地方不多。",
+      "en": "When A moves, B gets dragged along, turned right. Push B yourself and A ignores it. Not much room to turn around."
+    },
+    "tip": {
+      "zh": "先替 B 找好位置，再让 A 把它带过去。",
+      "en": "Set B up first, then let A carry it home."
+    },
+    "solution": "LLURLUURDDLDRRRUURRDDLRUULLDLLDLUU",
+    "optimal": 34
+  },
+  {
+    "id": 12,
+    "title": {
+      "zh": "传话",
+      "en": "Telephone"
+    },
+    "tag": {
+      "zh": "单向链",
+      "en": "One-way chain"
+    },
+    "rows": [
+      "########",
+      "#..#...#",
+      "#.g..@g#",
+      "#.B#.C.#",
+      "#.gA..##",
+      "########"
+    ],
+    "links": [["A", "B", 2, ">"], ["B", "C", "V", ">"]],
+    "note": {
+      "zh": "A 带 B，B 带 C，一路单向往下传。每传一手方向就变一次：A→B 反着走，B→C 上下镜像。",
+      "en": "A drives B, B drives C, one-way down the line. Each handoff twists it: A→B reverses, B→C mirrors up-down."
+    },
+    "tip": {
+      "zh": "推 C 谁也不会跟着动；推 A，就是三个一起动。",
+      "en": "Pushing C moves nothing else; pushing A moves all three."
+    },
+    "solution": "RDLDLUULLLDDRUDRLUURRDRDLUULLRRDDL",
+    "optimal": 34
+  },
+  {
+    "id": 13,
+    "title": {
+      "zh": "掉个头",
+      "en": "Flip It"
+    },
+    "tag": {
+      "zh": "扳道岔换方向",
+      "en": "Polarity switch"
+    },
+    "rows": [
+      "##########",
+      "#........#",
+      "#..@K....#",
+      "#...A....#",
+      "#......g.#",
+      "##########",
+      "#....B...#",
+      "#.g......#",
+      "##########"
+    ],
+    "modes": {
+      "LEFT": [["A", "B", 0]],
+      "RIGHT": [["A", "B", 2]]
+    },
+    "rail": [[4, 2], [5, 2]],
+    "mode_by_x": 4,
+    "note": {
+      "zh": "紫色的 K 是道岔：扳到左边一起走，扳到右边反着走。扳完要从下一步才算数。",
+      "en": "Purple K is a track switch: left means same way, right means opposite. It kicks in from your next move."
+    },
+    "tip": {
+      "zh": "两个箱子要去的地方不一样，什么时候该扳一下？",
+      "en": "The boxes need different destinations. When should you throw the switch?"
+    },
+    "solution": "RLDRRRULRRD",
+    "optimal": 11
+  },
+  {
+    "id": 14,
+    "title": {
+      "zh": "换舞伴",
+      "en": "Change Partners"
+    },
+    "tag": {
+      "zh": "扳道岔换搭档",
+      "en": "Partner swap"
+    },
+    "rows": [
+      "#########",
+      "#.......#",
+      "#..@K...#",
+      "#...A.g.#",
+      "#g.C....#",
+      "#########",
+      "#.gB.Dg.#",
+      "#.......#",
+      "#########"
+    ],
+    "modes": {
+      "LEFT": [["A", "B", 0], ["C", "D", 0]],
+      "RIGHT": [["A", "D", 0], ["B", "C", 0]]
+    },
+    "rail": [[4, 2], [5, 2]],
+    "mode_by_x": 4,
+    "note": {
+      "zh": "扳到左边是 A/B、C/D 两对，扳到右边换成 A/D、B/C。怎么换都不会有人落单。",
+      "en": "Left: A/B + C/D. Right: A/D + B/C. Everyone always has a partner."
+    },
+    "tip": {
+      "zh": "扳之前和扳之后，都看清连线两头连的是谁。",
+      "en": "Watch both ends of every link as you throw the switch."
+    },
+    "solution": "DRLURDRDLLL",
+    "optimal": 11
+  },
+  {
+    "id": 15,
+    "title": {
+      "zh": "扳来扳去",
+      "en": "Back and Forth"
+    },
+    "tag": {
+      "zh": "扳道岔换方向",
+      "en": "Polarity switch"
+    },
+    "rows": [
+      "#########",
+      "##.#....#",
+      "#..KA...#",
+      "#.@.g...#",
+      "#.......#",
+      "#########",
+      "##..gC..#",
+      "#.#...Bg#",
+      "#########"
+    ],
+    "modes": {
+      "LEFT": [["A", "B", 0], ["A", "C", 2]],
+      "RIGHT": [["A", "B", 2], ["A", "C", 0]]
+    },
+    "rail": [[3, 2], [4, 2]],
+    "mode_by_x": 3,
+    "note": {
+      "zh": "A 一个人带俩：道岔在左边时 B 跟着走、C 反着走；在右边正好倒过来。",
+      "en": "A drags two: on the left B follows and C mirrors; on the right it’s the other way round."
+    },
+    "tip": {
+      "zh": "只扳一次，多半不够。",
+      "en": "Throwing it once probably won’t do."
+    },
+    "solution": "URDRRRUULDRDDLLURULRRRDLL",
+    "optimal": 25
+  },
+  {
+    "id": 16,
+    "title": {
+      "zh": "两条岔路",
+      "en": "Two Switches"
+    },
+    "tag": {
+      "zh": "两个道岔",
+      "en": "Two switches"
+    },
+    "rows": [
+      "#########",
+      "#.#g..A.#",
+      "#..K....#",
+      "#@.J....#",
+      "#.##....#",
+      "#########",
+      "#...#...#",
+      "#...Cg..#",
+      "#...B..g#",
+      "#########"
+    ],
+    "switches": [
+      {
+        "id": "K",
+        "rail": [[3, 2], [4, 2]],
+        "mode_by_x": 3,
+        "modes": {
+          "LEFT": [["A", "B", 0]],
+          "RIGHT": [["A", "B", 2]]
+        }
+      },
+      {
+        "id": "J",
+        "rail": [[3, 3], [4, 3]],
+        "mode_by_x": 3,
+        "modes": {
+          "LEFT": [["A", "C", 0]],
+          "RIGHT": [["A", "C", 2]]
+        }
+      }
+    ],
+    "note": {
+      "zh": "K 管 A—B，J 管 A—C，各管各的：扳到左边一起走，扳到右边反着走。",
+      "en": "K runs A—B, J runs A—C, each on its own: left means same way, right means opposite."
+    },
+    "tip": {
+      "zh": "两个道岔都得扳一扳。先想好 B 和 C 各要往哪边去。",
+      "en": "You’ll need to throw both. Work out which way B and C each need to go."
+    },
+    "solution": "RRLURURRDRRULLDDLRUUL",
+    "optimal": 21
+  },
+  {
+    "id": 17,
+    "title": {
+      "zh": "调转箭头",
+      "en": "Turn the Arrow"
+    },
+    "tag": {
+      "zh": "道岔翻转单向",
+      "en": "Switch flips the arrow"
+    },
+    "rows": [
+      "########",
+      "#.#A...#",
+      "#.gK..##",
+      "#.B.#@.#",
+      "#.g....#",
+      "########"
+    ],
+    "modes": {
+      "LEFT": [["A", "B", 0, ">"]],
+      "RIGHT": [["B", "A", 0, ">"]]
+    },
+    "rail": [[3, 2], [4, 2]],
+    "mode_by_x": 3,
+    "note": {
+      "zh": "道岔在左边时，A 单向带着 B 走；扳到右边，箭头调个头，变成 B 带着 A 走。",
+      "en": "On the left, A drags B one-way. Throw the switch right and the arrow turns around: now B drags A."
+    },
+    "tip": {
+      "zh": "谁该被带着走，就把箭头指向谁。",
+      "en": "Point the arrow at whoever needs carrying."
+    },
+    "solution": "DLLLLUURRLDRDRRUUL",
+    "optimal": 18
+  },
+  {
+    "id": 18,
+    "title": {
+      "zh": "左右为难",
+      "en": "Torn Both Ways"
+    },
+    "tag": {
+      "zh": "扳道岔换方向",
+      "en": "Track switch"
+    },
+    "rows": [
+      "#########",
+      "#..#....#",
+      "##.K.g..#",
+      "#....A..#",
+      "#.#..@..#",
+      "#########",
+      "#.B.....#",
+      "#...g...#",
+      "#.Cg....#",
+      "#########"
+    ],
+    "modes": {
+      "LEFT": [["A", "B", 1], ["A", "C", 0]],
+      "RIGHT": [["A", "B", 0], ["A", "C", 3]]
+    },
+    "rail": [[3, 2], [4, 2]],
+    "mode_by_x": 3,
+    "note": {
+      "zh": "A 还是一拖二，但这回两边都会拐弯：道岔在左边时 B 右转、C 跟着走；在右边时 B 跟着走、C 左转。",
+      "en": "A still drags two, but now both can turn: on the left B turns right and C follows; on the right B follows and C turns left."
+    },
+    "tip": {
+      "zh": "这关得来回扳好几次。",
+      "en": "Expect to throw it back and forth several times."
+    },
+    "solution": "ULLLURDRRRULDLLLURDRRRUULDLDDRU",
+    "optimal": 31
+  },
+  {
+    "id": 19,
+    "title": {
+      "zh": "反客为主",
+      "en": "Turning the Tables"
+    },
+    "tag": {
+      "zh": "道岔翻转单向",
+      "en": "Switch flips the arrow"
+    },
+    "rows": [
+      "########",
+      "#..#g.##",
+      "#.@K...#",
+      "#.#.AgB#",
+      "##.....#",
+      "########"
+    ],
+    "modes": {
+      "LEFT": [["A", "B", 1, ">"]],
+      "RIGHT": [["B", "A", 3, ">"]]
+    },
+    "rail": [[3, 2], [4, 2]],
+    "mode_by_x": 3,
+    "note": {
+      "zh": "还是一根单向连线，不过会拐弯：道岔在左边时 A 带 B 右转，在右边换成 B 带 A 左转。",
+      "en": "Still one one-way link, but it turns: on the left A drags B, turned right; on the right B drags A, turned left."
+    },
+    "tip": {
+      "zh": "箭头指向谁，谁就是被带的那个。先想好该挪谁。",
+      "en": "Whoever the arrow points at gets dragged. Decide who needs to move first."
+    },
+    "solution": "RDRDRUDRULUULDURDRDDLURULDDLLURUU",
+    "optimal": 33
+  },
+  {
+    "id": 20,
+    "title": {
+      "zh": "四岔路口",
+      "en": "Four-Way Junction"
+    },
+    "tag": {
+      "zh": "道岔组合",
+      "en": "Switch combos"
+    },
+    "rows": [
+      "#########",
+      "#.......#",
+      "#.AK....#",
+      "#@gJ....#",
+      "#...#..##",
+      "#########",
+      "#..C....#",
+      "#g..g...#",
+      "#...B...#",
+      "#########"
+    ],
+    "modes": {
+      "LEFT|LEFT": [["A", "B", 0], ["A", "C", 0]],
+      "LEFT|RIGHT": [["A", "B", 2], ["A", "C", 0]],
+      "RIGHT|LEFT": [["A", "B", 0], ["B", "C", 2]],
+      "RIGHT|RIGHT": [["A", "C", 1], ["B", "C", 0]]
+    },
+    "switches": [
+      {
+        "id": "K",
+        "rail": [[3, 2], [4, 2]],
+        "mode_by_x": 3
+      },
+      {
+        "id": "J",
+        "rail": [[3, 3], [4, 3]],
+        "mode_by_x": 3
+      }
+    ],
+    "note": {
+      "zh": "这回 K 和 J 得一起看：两个道岔左左、左右、右左、右右，四种组合各是一套连线。",
+      "en": "This time read K and J together: left-left, left-right, right-left, right-right — each combination is its own set of links."
+    },
+    "tip": {
+      "zh": "面板里能看到扳一下 K 或 J 会变成什么样。四种连法里，这关至少要用到三种。",
+      "en": "The panel shows what throwing K or J would give you. You’ll need at least three of the four."
+    },
+    "solution": "URDRLUURDURRDLRDLUULLDRLLDDRURUULD",
+    "optimal": 34
+  },
+  {
+    "id": 21,
+    "title": {
+      "zh": "影子",
+      "en": "Shadow"
+    },
+    "tag": {
+      "zh": "连着你自己",
+      "en": "Linked to you"
+    },
+    "rows": [
+      "########",
+      "#.@....#",
+      "#..#...#",
+      "#......#",
+      "########",
+      "#.#....#",
+      "#.C.g..#",
+      "#....Ag#",
+      "########"
+    ],
+    "links": [["@", "A", 2]],
+    "free": ["C"],
+    "note": {
+      "zh": "A 是你的影子：你走一步，它就反着走一步，空着手走路也算。隔壁的木箱 C 你够不着，影子够得着。",
+      "en": "A is your shadow: every step you take, it takes the opposite one — even just walking. You can’t reach crate C next door, but your shadow can."
+    },
+    "tip": {
+      "zh": "影子撞了墙，你也走不动。",
+      "en": "If your shadow hits a wall, you’re not going anywhere either."
+    },
+    "solution": "RRRRDLLULLL",
+    "optimal": 11
+  },
+  {
+    "id": 22,
+    "title": {
+      "zh": "跟屁虫",
+      "en": "Sidekick"
+    },
+    "tag": {
+      "zh": "同屋的影子",
+      "en": "Roommate shadow"
+    },
+    "rows": [
+      "########",
+      "#...#..#",
+      "#......#",
+      "#..gC#.#",
+      "#..A...#",
+      "#...@.g#",
+      "########"
+    ],
+    "links": [["@", "A", 1]],
+    "free": ["C"],
+    "note": {
+      "zh": "这个影子就跟在你身边，而且总往你右手边拐。你俩得一起把木箱 C 推到位。",
+      "en": "This shadow lives right next to you and always veers to your right. Team up to get crate C home."
+    },
+    "tip": {
+      "zh": "你去推影子的时候，它自己也在走——两边方向不一样就推不动。",
+      "en": "When you push your shadow, it’s also walking — if the directions disagree, nothing moves."
+    },
+    "solution": "LLURRLLUURRDDURU",
+    "optimal": 16
+  },
+  {
+    "id": 23,
+    "title": {
+      "zh": "灵魂互换",
+      "en": "Body Swap"
+    },
+    "tag": {
+      "zh": "道岔换影子",
+      "en": "Switch picks your shadow"
+    },
+    "rows": [
+      "#########",
+      "#......##",
+      "#..K....#",
+      "#...@...#",
+      "#########",
+      "#B..g.#.#",
+      "#..C.gA.#",
+      "#.g.....#",
+      "#########"
+    ],
+    "modes": {
+      "LEFT": [["@", "A", 0], ["B", "A", 2, ">"]],
+      "RIGHT": [["@", "B", 0], ["A", "B", 2, ">"]]
+    },
+    "rail": [[3, 2], [4, 2]],
+    "mode_by_x": 3,
+    "free": ["C"],
+    "note": {
+      "zh": "道岔决定谁当你的影子：在左边是 A，在右边是 B。没当上的那个也没闲着，它被推时会反着带动影子。",
+      "en": "The switch decides who shadows you: A on the left, B on the right. The other one drags the shadow backwards, one-way."
+    },
+    "tip": {
+      "zh": "先想清楚，每个箱子该在道岔哪一边的时候挪。",
+      "en": "Work out which box should move with the switch on which side."
+    },
+    "solution": "LLURDRRULDLLURDRRR",
+    "optimal": 18
+  },
+  {
+    "id": 24,
+    "title": {
+      "zh": "隔空推箱子",
+      "en": "Remote Sokoban"
+    },
+    "tag": {
+      "zh": "影子推箱子",
+      "en": "Shadow pushes crates"
+    },
+    "rows": [
+      "#########",
+      "#..@....#",
+      "#.......#",
+      "##......#",
+      "#########",
+      "#.g..A.g#",
+      "##....C.#",
+      "#..D...##",
+      "#.#.#.g.#",
+      "#########"
+    ],
+    "links": [["@", "A", "H"]],
+    "free": ["C", "D"],
+    "note": {
+      "zh": "两个木箱，一个左右镜像的影子：你往左，它往右；上下倒是一起走。",
+      "en": "Two crates and a left-right mirrored shadow: you go left, it goes right; up and down, you move together."
+    },
+    "tip": {
+      "zh": "别把木箱推进墙角——那边可没人能把它拉出来。",
+      "en": "Don’t push a crate into a corner — nobody over there can pull it out."
+    },
+    "solution": "DDLULURRRRDRDLLLULDUUL",
+    "optimal": 22
+  },
+  {
+    "id": 25,
+    "title": {
+      "zh": "背靠背",
+      "en": "Back to Back"
+    },
+    "tag": {
+      "zh": "同屋的影子",
+      "en": "Roommate shadow"
+    },
+    "rows": [
+      "#########",
+      "#....g..#",
+      "#.#...DA#",
+      "#.#..C..#",
+      "#...@...#",
+      "#.g#g...#",
+      "#########"
+    ],
+    "links": [["@", "A", 2]],
+    "free": ["C", "D"],
+    "note": {
+      "zh": "影子跟你住一屋，你往哪走，它就往反方向走。两个木箱，三个圈。",
+      "en": "Your shadow shares the room and always goes the opposite way. Two crates, three rings."
+    },
+    "tip": {
+      "zh": "影子挡路的时候，往反方向走一步，它就退开了。",
+      "en": "If your shadow is in the way, step the other way and it backs off."
+    },
+    "solution": "RRURULULDULDDRLDRRDRULLLURDRRUURRU",
+    "optimal": 34
+  },
+  {
+    "id": 26,
+    "title": {
+      "zh": "一心二用",
+      "en": "Two Things at Once"
+    },
+    "tag": {
+      "zh": "两边推箱子",
+      "en": "Two rooms"
+    },
+    "rows": [
+      "#########",
+      "###..@.g#",
+      "#...#.D.#",
+      "#.......#",
+      "#########",
+      "#gA.....#",
+      "#.C#..g.#",
+      "#.......#",
+      "#########"
+    ],
+    "links": [["@", "A", "H"]],
+    "free": ["C", "D"],
+    "note": {
+      "zh": "你在这边推一个木箱，影子在那边推另一个，而且是左右镜像。",
+      "en": "You push a crate over here while your mirrored shadow pushes another over there."
+    },
+    "tip": {
+      "zh": "一边推好了，另一边可能刚好卡住。两边得一起想。",
+      "en": "Finishing one side may leave the other stuck. Think about both at once."
+    },
+    "solution": "LLDDRRRUDLLLUURRRDDLUDLLUURRLLDLL",
+    "optimal": 33
+  },
+  {
+    "id": 27,
+    "title": {
+      "zh": "踩一脚",
+      "en": "Step On It"
+    },
+    "tag": {
+      "zh": "压板",
+      "en": "Pressure plate"
+    },
+    "rows": [
+      "#########",
+      "#..@...##",
+      "#...A...#",
+      "#.....g.#",
+      "#########",
+      "#....g..#",
+      "#..B....#",
+      "#########"
+    ],
+    "modes": {
+      "OFF": [["A", "B", 0]],
+      "ON": [["A", "B", 2]]
+    },
+    "plates": [[2, 2]],
+    "note": {
+      "zh": "青色方块是压板。每一步开始时，只要上面压着东西，A—B 就会变成反着走。",
+      "en": "The teal tile is a pressure plate. If anything is on it when a move starts, A—B flips to opposite."
+    },
+    "tip": {
+      "zh": "站在压板上推，和离开压板再推，结果不一样。",
+      "en": "Pushing from the plate and pushing off it give different results."
+    },
+    "solution": "RRDLLULDLDRRRR",
+    "optimal": 14
+  },
+  {
+    "id": 28,
+    "title": {
+      "zh": "双向开关",
+      "en": "Pressure Valve"
+    },
+    "tag": {
+      "zh": "压板＋单向",
+      "en": "Plate + one-way"
+    },
+    "rows": [
+      "#########",
+      "#...#g..#",
+      "#.......#",
+      "#..#.#B.#",
+      "#g.A..@.#",
+      "#########",
+      "#.#.C...#",
+      "#...#.g.#",
+      "#.......#",
+      "#########"
+    ],
+    "modes": {
+      "OFF": [["A", "C", 0, ">"], ["B", "C", 1, ">"]],
+      "ON": [["A", "C", 2, ">"], ["B", "C", 3, ">"]]
+    },
+    "plates": [[6, 1]],
+    "note": {
+      "zh": "A 和 B 都单向指挥 C。踩下压板，两条指令一起掉头。",
+      "en": "A and B both give C one-way orders. Step on the plate and both orders turn around."
+    },
+    "tip": {
+      "zh": "先规划好 C 的路线，再决定哪几步要踩着压板走。",
+      "en": "Plan C’s route first, then decide which steps need the plate."
+    },
+    "solution": "URUULDLLDDLLRRRRUURUL",
+    "optimal": 21
+  },
+  {
+    "id": 29,
+    "title": {
+      "zh": "替身",
+      "en": "Stand-In"
+    },
+    "tag": {
+      "zh": "木箱压压板",
+      "en": "Crate on the plate"
+    },
+    "rows": [
+      "#########",
+      "#....Ag.#",
+      "#.gC.@..#",
+      "#.#...#.#",
+      "#########",
+      "#.......#",
+      "#..g..B.#",
+      "#.......#",
+      "#########"
+    ],
+    "modes": {
+      "OFF": [["A", "B", "H"]],
+      "ON": [["A", "B", "V"]]
+    },
+    "plates": [[6, 2]],
+    "free": ["C"],
+    "note": {
+      "zh": "压板踩下时，A—B 从左右镜像变成上下镜像。木箱 C 也能压住压板，可它最后也得进圈。",
+      "en": "With the plate pressed, A—B switches from a left-right to an up-down mirror. Crate C can hold the plate down too — but it also has to end in a ring."
+    },
+    "tip": {
+      "zh": "让 C 替你站一会儿，你就能腾出手来。",
+      "en": "Let C stand in for a while and your hands are free."
+    },
+    "solution": "RULDLLULLDRRRRULRRRDLLDLLULURRRDLL",
+    "optimal": 34
+  },
+  {
+    "id": 30,
+    "title": {
+      "zh": "大结局",
+      "en": "Grand Finale"
+    },
+    "tag": {
+      "zh": "全都来了",
+      "en": "Everything at once"
+    },
+    "rows": [
+      "#########",
+      "#...#.B.#",
+      "#.#..@g.#",
+      "#...#...#",
+      "#########",
+      "#.g...#.#",
+      "#..g....#",
+      "#...C...#",
+      "#...A...#",
+      "#########"
+    ],
+    "modes": {
+      "OFF": [["@", "A", 0], ["B", "A", 2]],
+      "ON": [["@", "A", 2], ["B", "A", 0]]
+    },
+    "plates": [[5, 1]],
+    "free": ["C"],
+    "note": {
+      "zh": "压板一踩，影子就从跟你同向变成反向，B 和影子的关系也跟着掉头。那边还有个木箱，等着影子去推。",
+      "en": "Press the plate and your shadow flips from same-way to opposite — and B’s link to it flips too. Over there, a crate waits for your shadow."
+    },
+    "tip": {
+      "zh": "压板不挑人，B 也能踩。",
+      "en": "The plate doesn’t care who’s on it — B can press it too."
+    },
+    "solution": "RLURLRDLUDURLRDUDLURDLRLUDURLRDLU",
+    "optimal": 33
+  }
+]

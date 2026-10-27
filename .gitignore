@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Build output (includes the generated service worker)
+dist/
+dev-dist/
+
+# Level-search output from lab/batch.sh
+lab/out/
+
+# Logs and caches
+*.log
+npm-debug.log*
+.vite/
+coverage/
+*.tsbuildinfo
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+# Claude Code local session state
+.claude/scheduled_tasks.lock
